@@ -1,4 +1,5 @@
 import React from 'react'
+import QuoteText from './QuoteText'
 
 const QuoteBox = ({randomQuote, randomColor, getRandomAll}) => {
 
@@ -12,14 +13,15 @@ const QuoteBox = ({randomQuote, randomColor, getRandomAll}) => {
   console.log(randomColor)
   return (
     <article style={colorObj} className='card'>
-      <p className='card__quote'>{randomQuote.quote}</p>
-      <h1 className='card__author'>{randomQuote.author}</h1>
+      <QuoteText 
+        randomQuote={randomQuote} />
       <button 
       className='card__btn' 
       style={backgroungObj} 
       onClick={getRandomAll}
       >&#62;</button>
     </article>
+
   )
 }
 
